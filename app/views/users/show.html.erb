@@ -1,0 +1,24 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @user %>
+
+<div>
+  <%= link_to "Edit this user", edit_user_path(@user) %> |
+  <%= link_to "Back to users", users_path %>
+
+  <%= button_to "Destroy this user", @user, method: :delete %>
+</div>
+<div>
+  <h1> name </h1>
+  <%= @user.name %>
+  <h1> email </h1>
+  <%= @user.email %>
+  <h1> microposts first </h1>
+  <%= @user.microposts.first&.content || "no micropost create yet" %>
+  <h1> microposts all </h1>
+  <% i = 0 %>
+  <%@user.microposts.each do |f| %> 
+   <p><%= i += 1 %> =  <%= f.content  %> </p>
+
+  <% end %> 
+</div>
