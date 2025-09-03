@@ -15,5 +15,5 @@ Rails.application.routes.draw do
   # root "posts#index"
   # root 'application#hello', as: :hello
   # get "goodbye", to: 'application#goodbye', as: :goodbye
-  root 'users#index'
+  root "users#index"
 end
